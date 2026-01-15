@@ -1,0 +1,28 @@
+
+{
+  "id": "essential-os-nothing-v4",
+  "name": "Essential OS",
+  "short_name": "Essential",
+  "description": "Nothing OS 4.0 Focus Engine",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9ImJsYWNrIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIyNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGcgZmlsbD0id2hpdGUiPgogICAgPCEtLSBEb3QgTWF0cml4IEUgLS0+CiAgICA8Y2lyY2xlIGN4PSIxODAiIGN5PSIxNjAiIHI9IjE1Ii8+IDxjaXJjbGUgY3g9IjIyMCIgY3k9IjE2MCIgcj0iMTUiLz4gPGNpcmNsZSBjeD0iMjYwIiBjeT0iMTYwIiByPSIxNSIvPiA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIxNjAiIHI9IjE1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMDgiIHI9IjE1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxODAiIGN5PSIyNTYiIHI9IjE1Ii8+IDxjaXJjbGUgY3g9IjIyMCIgY3k9IjI1NiIgcj0iMTUiLz4gPGNpcmNsZSBjeD0iMjYwIiBjeT0iMjU2IiByPSIxNSIvPgogICAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iMzA0IiByPSIxNSIvPgogICAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iMzUyIiByPSIxNSIvPiA8Y2lyY2xlIGN4PSIyMjAiIGN5PSIzNTIiIHI9IjE1Ii8+IDxjaXJjbGUgY3g9IjI2MCIgY3k9IjM1MiIgcj0iMTUiLz4gPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzUyIiByPSIxNSIvPgogIDwvZz4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSIxNjAiIHI9IjE1IiBmaWxsPSIjZmYyZTIeIi8+Cjwvc3ZnPg==",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIGZpbGw9ImJsYWNrIi8+CiAgPGcgZmlsbD0id2hpdGUiPgogICAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iOCIvPiA8Y2lyY2xlIGN4PSI4MCIgY3k9IjYwIiByPSI4Ii8+IDxjaXJjbGUgY3g9IjEwMCIgY3k9IjYwIiByPSI4Ii8+IDxjaXJjbGUgY3g9IjEyMCIgY3k9IjYwIiByPSI4Ii8+CiAgICA8Y2lyY2xlIGN4PSI2MCIgY3k9Ijg0IiByPSI4Ii8+CiAgICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjEwOCIgcj0iOCIvPiA8Y2lyY2xlIGN4PSI4MCIgY3k9IjEwOCIgcj0iOCIvPiA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxMDgiIHI9IjgiLz4KICAgIDxjaXJjbGUgY3g9IjYwIiBjeT0iMTMyIiByPSI4Ii8+CiAgICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjE1NiIgcj0iOCIvPiA8Y2lyY2xlIGN4PSI4MCIgY3k9IjE1NiIgcj0iOCIvPiA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIxNTYiIHI9IjgiLz4gPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTU2IiByPSI4Ii8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjE0MCIgY3k9IjYwIiByPSI4IiBmaWxsPSIjZmYyZTIeIi8+Cjwvc3ZnPg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "scope": "./",
+  "categories": ["productivity", "utilities"]
+}

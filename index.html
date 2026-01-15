@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <title>Essential • Nothing OS</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIGZpbGw9ImJsYWNrIi8+CiAgPGNpcmNsZSBjeD0iMjU2IiBjeT0iMjU2IiByPSIyNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzExMSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGcgZmlsbD0id2hpdGUiPgogICAgPCEtLSBEb3QgTWF0cml4IEUgLS0+CiAgICA8Y2lyY2xlIGN4PSIxODAiIGN5PSIxNjAiIHI9IjE1Ii8+IDxjaXJjbGUgY3g9IjIyMCIgY3k9IjE2MCIgcj0iMTUiLz4gPGNpcmNsZSBjeD0iMjYwIiBjeT0iMTYwIiByPSIxNSIvPiA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIxNjAiIHI9IjE1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxODAiIGN5PSIyMDgiIHI9IjE1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxODAiIGN5PSIyNTYiIHI9IjE1Ii8+IDxjaXJjbGUgY3g9IjIyMCIgY3k9IjI1NiIgcj0iMTUiLz4gPGNpcmNsZSBjeD0iMjYwIiBjeT0iMjU2IiByPSIxNSIvPgogICAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iMzA0IiByPSIxNSIvPgogICAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iMzUyIiByPSIxNSIvPiA8Y2lyY2xlIGN4PSIyMjAiIGN5PSIzNTIiIHI9IjE1Ii8+IDxjaXJjbGUgY3g9IjI2MCIgY3k9IjM1MiIgcj0iMTUiLz4gPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzUyIiByPSIxNSIvPgogIDwvZz4KICA8Y2lyY2xlIGN4PSIzNDAiIGN5PSIxNjAiIHI9IjE1IiBmaWxsPSIjZmYyZTIeIi8+Cjwvc3ZnPg==">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --nothing-red: #ff2e2e;
+      --glass-bg: rgba(8, 8, 8, 0.75);
+      --glass-border: rgba(255, 255, 255, 0.05);
+      --nothing-radius: 2.2rem;
+      --surface-grid: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      -webkit-tap-highlight-color: transparent;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+    #grid-bg {
+      position: fixed;
+      inset: -50px;
+      z-index: 1;
+      pointer-events: none;
+      background-image: var(--surface-grid);
+      background-size: 32px 32px;
+      opacity: 0.6;
+    }
+    #root { height: 100%; width: 100%; position: relative; z-index: 10; }
+    .dot-matrix { font-family: 'Space Mono', monospace; }
+    .nothing-red { color: var(--nothing-red); }
+    .nothing-red-bg { background-color: var(--nothing-red); }
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(50px) saturate(200%);
+      -webkit-backdrop-filter: blur(50px) saturate(200%);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--nothing-radius);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .floating-nav {
+      position: fixed;
+      bottom: 2.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      width: 92%;
+      max-width: 420px;
+    }
+    @keyframes pulse-red {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 2px var(--nothing-red)); }
+      50% { opacity: 0.6; filter: drop-shadow(0 0 8px var(--nothing-red)); }
+    }
+    .nothing-pulse { animation: pulse-red 2s infinite ease-in-out; }
+  </style>
+
+  <script>
+    // Critical: Global variable polyfill for the Gemini SDK
+    window.process = { env: { API_KEY: "" } };
+  </script>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@1.3.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="grid-bg"></div>
+  <div id="root">
+    <div class="h-full w-full flex items-center justify-center">
+      <div class="dot-matrix text-[10px] tracking-[0.5em] text-zinc-800 animate-pulse uppercase">Booting_Engine...</div>
+    </div>
+  </div>
+
+  <!-- Updated Loader: No more "export named run" error -->
+  <script type="module">
+    import 'https://esm.sh/run';
+  </script>
+  
+  <!-- Explicitly pointing to index.tsx for the runner to find -->
+  <script type="text/babel" src="index.tsx" data-type="module"></script>
+
+  <script>
+    // Service Worker registration with subfolder handling
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // Automatically determine if we are in a subfolder (GitHub Pages)
+        const swPath = window.location.pathname.includes('/Essential-app/') 
+          ? '/Essential-app/sw.js' 
+          : './sw.js';
+          
+        navigator.serviceWorker.register(swPath)
+          .then(reg => console.log('ESSENTIAL: OS Active'))
+          .catch(err => console.error('ESSENTIAL: OS Failure', err));
+      });
+    }
+  </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

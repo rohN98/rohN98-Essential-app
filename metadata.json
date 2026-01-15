@@ -1,0 +1,17 @@
+
+{
+  "name": "Essential OS",
+  "short_name": "Essential",
+  "description": "Nothing OS 4.0 Focus Engine for Phone (2a).",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
